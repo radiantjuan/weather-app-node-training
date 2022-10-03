@@ -1,0 +1,19 @@
+{{> header}}
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            Quote
+        </div>
+        <div class="card-body">
+            {{> content}}
+            <form id="searchForm">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="search_weather" aria-describedby="emailHelp"
+                        placeholder="Enter location" required>
+                </div>
+                <button class="btn btn-primary" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</div>
+{{> footer}}
