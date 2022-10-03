@@ -5,6 +5,7 @@ const { response } = require('express');
 const { getWeatherForcast } = require('./weather');
 
 const app = express();
+const port = process.env.PORT ?? 3000;
 
 const viewsPath = path.join(__dirname, '../templates');
 const partialsPath = path.join(__dirname, '../templates/partials')
@@ -56,6 +57,6 @@ app.get('*', (req, res) => {
     });
 });
 
-app.listen(3000, () => {
-    console.log("sever is up");
+app.listen(port, () => {
+    console.log(`sever is up in port ${port}`);
 });
