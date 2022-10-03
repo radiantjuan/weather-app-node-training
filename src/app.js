@@ -5,7 +5,7 @@ const { response } = require('express');
 const { getWeatherForcast } = require('./weather');
 
 const app = express();
-const port = process.env.PORT ?? 3000;
+const port = process.env.PORT || 3000;
 
 const viewsPath = path.join(__dirname, '../templates');
 const partialsPath = path.join(__dirname, '../templates/partials')
